@@ -1,0 +1,32 @@
+import Image from "next/image";
+
+type Props = {
+  title: string,
+  titleSecondLine?: string,
+  imageSrc: string,
+  imageAlt: string
+}
+
+const blurDataUrl = 'data:image/webp;base64,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'
+
+export default function Hero({ title = 'Title is missing', titleSecondLine, imageSrc = '/images/hero.jpg', imageAlt = 'Image alt is missing' }: Props) {
+
+  return (
+    <section className="flex items-center justify-center h-[600px] overflow-hidden w-full relative">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-neutral-900/70  to-neutral-900/10 z-10"></div>
+      <Image
+        className="z-0 absolute"
+        src={imageSrc}
+        alt={imageAlt}
+        height={800}
+        width={2560}
+        priority
+        placeholder="blur"
+        blurDataURL={blurDataUrl}
+      />
+      <div className="absolute text-center text-white z-20">
+        <h1 className="text-white text-[70px] font-black drop-shadow-2xl shadow-black">{title}<br /><span className="uppercase">{titleSecondLine}</span></h1>
+      </div>
+    </section>
+  )
+}

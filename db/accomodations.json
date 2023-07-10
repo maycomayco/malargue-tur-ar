@@ -1,0 +1,47 @@
+[
+  {
+    "name": "HOTEL Punto Sur – Hotel Boutique",
+    "slug": "puntosurhotel",
+    "image": "https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-26-at-21.03.39.jpeg",
+    "mapURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.2945086499594!2d-69.58939832335943!3d-35.47225647265554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967a7eda8955514d%3A0xc989b960c418e388!2sPUNTO%20SUR%20HOTEL%20BOUTIQUE!5e0!3m2!1ses-419!2sar!4v1689010305915!5m2!1ses-419!2sar",
+    "description": "Ubicado a tan solo 100 metros del centro y avenida principal de la ciudad de Malargüe, 300 de la terminal de ómnibus y del Complejo Planetario, cuenta con 11 habitaciones totalmente equipadas, incluida una Ejecutiva, en un hotel completamente nuevo. Cada una de ellas cuenta con aire central, tanto acondicionado como calefacción, Smart TV, somieres de 0.90 mts. inteligente y somier Queen, frigo bar y caja de seguridad, Wifi de alta velocidad en todo el hotel. Un completo desayuno buffet incluido en la tarifa. El hotel además ofrece un espacio de reuniones Coworking con alta velocidad de internet propio, cocheras techadas y seguras. También contamos con gimnasio en nuestras instalaciones. El hotel boutique combina estilo y modernidad dando lugar a un nuevo concepto de lujo y confort en la ciudad.",
+    "contactInfo": {
+      "address": "Rua Alexandre Herculano, 352",
+      "whatsapp": "+5492604410451",
+      "phone": "+5492604410451",
+      "website": "",
+      "facebook": "https://www.facebook.com/puntosurhotel",
+      "instagram": "https://instagram.com/puntosurhotel"
+    }
+  },
+  {
+    "name": "Hotel Terra Patagonia",
+    "slug": "hotel-terra-patagonia",
+    "image": "https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2022/07/17bdcb9c-f7c0-44e7-8d69-066407313aca.jpg",
+    "mapURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.5459289986425!2d-69.5879819233596!3d-35.46603427265753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967a7fe7207da06d%3A0xc9cf0fb28620db53!2sTerra%20Patagonia%20Hotel!5e0!3m2!1ses-419!2sar!4v1689019859911!5m2!1ses-419!2sar",
+    "description": "El Hotel Terra Patagonia se ubica en plena avenida principal de la ciudad de Malargüe. Cuenta con una excelente vista a la cordillera desde sus habitaciones y su terraza ubicada en un tercer piso con acceso a la misma mediante ascensor. Contamos con habitaciones: standar, suite y premium. Las mismas pueden ser individuales, dobles matrimonial, dobles twin, triples matrimonial, triples twin, cuádruples con matrimonial.",
+    "contactInfo": {
+      "address": "Rua Alexandre Herculano, 352",
+      "whatsapp": "+5492604801469",
+      "phone": "+5492604801469",
+      "website": "",
+      "facebook": "",
+      "instagram": "https://instagram.com/terrapatagoniahotel"
+    }
+  },
+  {
+    "name": "Hotel Risco Plateado",
+    "slug": "hotel-risco-plateado",
+    "image": "https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2021/11/Risco-Plateado.jpg",
+    "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6499.461555053894!2d-69.596393!3d-35.461459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967a7eb783e89d2b%3A0xe879b66dfd5995af!2sRisco%20Plateado%20-%20Hotel%20y%20Restaurante!5e0!3m2!1ses-419!2sar!4v1689020168056!5m2!1ses-419!2sar",
+    "description": "Hotel Risco Plateado Room & Suite ofrece Servicio de Alojamiento y Servicio de Restaurante a la carta, con una variedad de exquisitos platos y gran gama de vinos. Además, contamos con un extenso parque de 6 hectáreas, donde el huésped puede disfrutar de la tranquilidad que ofrece la naturaleza con hermosas panorámicas, rodeado de árboles y con una hermosa laguna. Dentro del mismo encontramos cálidas y confortables cabañas. Nuestro objetivo es lograr que nuestros visitantes se sientan como en casa, ofreciendo nuevas experiencias en un hotel familiar con un compromiso ecológico genuino, donde priorizamos las prácticas eco sustentables.",
+    "contactInfo": {
+      "address": "Paso El Planchón 815",
+      "whatsapp": "+5492604346554",
+      "phone": "+5492604346554",
+      "website": "http://www.hotelriscoplateado.com.ar/",
+      "facebook": "https://www.facebook.com/pages/Hotel%20Risco%20Plateado%20&%20Resort/699390906746038/",
+      "instagram": "https://www.instagram.com/hotel_risco_plateado/"
+    }
+  }
+]
