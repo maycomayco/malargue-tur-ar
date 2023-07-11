@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-purple gap-8 px-8 py-10 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] text-center text-white">
+    <footer className="bg-purple gap-8 px-8 py-10 grid grid-cols-2 text-center text-white lg:grid-cols-4">
       <div>
         <p>Sitio Web diseñado por el Área Sistemas de la Municipalidad de Malargüe, Ciudad Amigable</p>
       </div>
