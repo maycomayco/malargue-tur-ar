@@ -1,9 +1,10 @@
 'use client'
 
 import Image from "next/image";
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
+import { useState } from "react";
+import { FaBars, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaTimes } from "react-icons/fa";
 
 // TODO: mover este menu afuera a otro archivo
 const navLinks = [
@@ -29,54 +30,51 @@ const navLinks = [
   }
 ]
 
+const srcLogoMobile = 'https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2021/06/malargue-turismo-violeta-sin-fondo.png'
+
 /* 
 TODO:
-- No funciona el active en el link
 - no es reponsive
-- no funciona el menu hamburguesa
 */
 
 export default function Navbar() {
   const pathname = usePathname()
+  const [mobileMenuOpened, setMobileMenuOpened] = useState(false)
+
+  const toggleMenu = () => {
+    setMobileMenuOpened(!mobileMenuOpened)
+  }
 
   return (
-    <nav className="bg-white dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 flex">
+    <header className="bg-white w-full top-0 left-0 border-gray-200 flex relative justify-between items-center md:items-stretch px-4 md:px-0 ease-in duration-300 z-50">
       {/* logo */}
-      <div className="flex bg-green items-center">
-        <div className="px-3">
+      <div className="flex py-3 md:bg-green md:py-0 items-center">
+        <div className="md:px-3">
           <Link href="/" className="flex items-center">
-            <Image src="https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2017/08/malargue-turismo-blanco-sin-fondo.png" width={140} height={140} alt="Flowbite Logo" />
+            <Image src="https://turismo.malargue.gov.ar/newstart/wp-content/uploads/2017/08/malargue-turismo-blanco-sin-fondo.png" width={140} height={140} alt="Malargue mobile logo" className="hidden md:block" />
+            <Image src={srcLogoMobile} width={140} height={140} alt="Malargue Logo" className="md:hidden" />
           </Link>
         </div>
       </div>
-      {/* hamburger button */}
-      <div className="flex md:hidden">
-        <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>
-      </div>
+
       {/* header right */}
-      <div className="flex grow flex-col">
+      <div className="hidden grow flex-col md:flex">
         {/* header right top */}
-        <div>
+        <div className="hidden md:block">
           {/* header right - top - left */}
           <div className="flex bg-black text-white text-xs p-1 h-10 items-center">
             <div className="flex gap-2 px-3 items-center">
-              <PhoneIcon className="h-4 w-4 text-purple" />
+              <FaPhoneAlt className="h-4 w-4 text-purple" />
               <span>+5492604801708</span>
             </div>
             <div className="flex gap-2 px-3 items-center">
-              <MapPinIcon className="h-4 w-4 text-purple" />
+              <FaMapMarkerAlt className="h-4 w-4 text-purple" />
               <span>Pasaje la Orteguina, M5613 Malargüe, Mendoza</span>
             </div>
             <div className="flex gap-2 px-3 items-center">
-              <EnvelopeIcon className="h-4 w-4 text-purple" />
+              <FaEnvelope className="h-4 w-4 text-purple" />
               <span>infoturismomalargue@gmail.com</span>
             </div>
-            {/* </div> */}
             {/* iconos */}
             <div></div>
           </div>
@@ -105,7 +103,47 @@ export default function Navbar() {
         </div>
       </div>
 
-    </nav >
+      {/* hamburger button */}
+      <div className="block md:hidden z-10 md:items-center md:right-0 ease-in duration-300" onClick={toggleMenu}>
+        {mobileMenuOpened
+          ? <FaTimes size={30} className="text-gray-700" />
+          : <FaBars size={30} className="text-gray-700" />
+        }
+      </div>
+
+      <section
+        className={`${mobileMenuOpened ? 'absolute' : 'hidden'} top-0 left-0 w-full h-screen bg-white text-xl font-bold ease-in duration-300`}
+      >
+        <nav className="flex flex-col min-h-screen justify-center items-center " aria-label="mobile">
+          {/* <ul> */}
+          <Link
+            href={'/'}
+            className={`w-full py-6 text-center hover:opacity-90 md:hover:text-purple `}
+            aria-current="page"
+            onClick={toggleMenu}
+          >
+            Home
+          </Link>
+          {
+            navLinks.map((link, idx) => {
+              const isActive = pathname.includes(link.href) && link.href !== '/'
+              return (
+                <Link
+                  key={idx}
+                  href={link.href}
+                  className={`w-full py-6 text-center hover:opacity-90 md:hover:text-purple ${isActive ? 'text-purple' : 'text-gray-900'}`}
+                  aria-current="page"
+                  onClick={toggleMenu}
+                >
+                  {link.name}
+                </Link>
+              )
+            })
+          }
+          {/* </ul> */}
+        </nav>
+      </section>
+    </header >
 
   )
 }
