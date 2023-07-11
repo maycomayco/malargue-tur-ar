@@ -25,7 +25,7 @@ export default function Hero({ title = 'Title is missing', titleSecondLine, imag
         style={{ objectFit: 'cover' }}
       />
       <div className="absolute text-center text-white z-20">
-        <h1 className="text-white text-[70px] font-black drop-shadow-2xl shadow-black">{title}<br /><span className="uppercase">{titleSecondLine}</span></h1>
+        <h1 className="text-white text-5xl leading-loose md:text-[70px] md:leading-none font-black drop-shadow-2xl shadow-black">{title}<br /><span className="uppercase">{titleSecondLine}</span></h1>
       </div>
     </section>
   )
