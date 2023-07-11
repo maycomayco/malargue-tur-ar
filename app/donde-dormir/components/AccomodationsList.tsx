@@ -8,7 +8,7 @@ export default async function AccomodationsList() {
 
   return (
     <section className="py-8">
-      <ul className="grid grid-cols-[repeat(auto-fit,minmax(600px,1fr))] gap-8 justify-stretch ">
+      <ul className="grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-8 justify-stretch ">
         {accomodations?.map((accomodation) => (
           <AccomodationItem key={accomodation.slug} accomodation={accomodation} />
         ))}
